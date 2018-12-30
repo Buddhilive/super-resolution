@@ -6,7 +6,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Image Super Resolution</h1>
+        <h1>Image Super Resolution (Do not use, development still in progress)</h1>
         <p>Drag and drop images to increase the size of an image by 2x without losing quality.</p>
         <DropImage />
       </div>

@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Super Resolution (Do not use, development still in progress)
+A small web app to do image super resolution in the browser using tensorflow.js.
 
 ## Available Scripts
 
