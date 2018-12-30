@@ -1,14 +1,13 @@
 {
-  "main.css": "/super-resolution/static/css/main.e90f04af.chunk.css",
-  "main.js": "/super-resolution/static/js/main.a31625ea.chunk.js",
-  "main.js.map": "/super-resolution/static/js/main.a31625ea.chunk.js.map",
-  "static/js/1.fa92c112.chunk.js": "/super-resolution/static/js/1.fa92c112.chunk.js",
-  "static/js/1.fa92c112.chunk.js.map": "/super-resolution/static/js/1.fa92c112.chunk.js.map",
+  "main.css": "/super-resolution/static/css/main.3c6c14a0.chunk.css",
+  "main.js": "/super-resolution/static/js/main.fc2b5b3a.chunk.js",
+  "main.js.map": "/super-resolution/static/js/main.fc2b5b3a.chunk.js.map",
+  "static/js/1.50fe620c.chunk.js": "/super-resolution/static/js/1.50fe620c.chunk.js",
+  "static/js/1.50fe620c.chunk.js.map": "/super-resolution/static/js/1.50fe620c.chunk.js.map",
   "runtime~main.js": "/super-resolution/static/js/runtime~main.4f9c75ca.js",
   "runtime~main.js.map": "/super-resolution/static/js/runtime~main.4f9c75ca.js.map",
-  "static/media/logo.svg": "/super-resolution/static/media/logo.5d5d9eef.svg",
-  "static/css/main.e90f04af.chunk.css.map": "/super-resolution/static/css/main.e90f04af.chunk.css.map",
+  "static/css/main.3c6c14a0.chunk.css.map": "/super-resolution/static/css/main.3c6c14a0.chunk.css.map",
   "index.html": "/super-resolution/index.html",
-  "precache-manifest.92af1c03b486430d1bf66ecb4e719caa.js": "/super-resolution/precache-manifest.92af1c03b486430d1bf66ecb4e719caa.js",
+  "precache-manifest.0a4a72503c83cae1b00d23862cc587db.js": "/super-resolution/precache-manifest.0a4a72503c83cae1b00d23862cc587db.js",
   "service-worker.js": "/super-resolution/service-worker.js"
 }
