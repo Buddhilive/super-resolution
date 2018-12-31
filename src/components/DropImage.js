@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 import Dropzone from 'react-dropzone'
 import SuperResolution from './SuperResolution'
 
@@ -13,6 +12,7 @@ export default class DropImage extends React.Component {
   }
 
   onDrop = (acceptedFiles, rejectedFiles) => {
+    this.setState({files: []})
      // Do something with files
      console.log(URL.createObjectURL(acceptedFiles[0]))
 
@@ -23,26 +23,29 @@ export default class DropImage extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-sm-6">
+          <div className="col-sm-12">
             <Dropzone onDrop={this.onDrop}>
-              {({getRootProps, getInputProps, isDragActive}) => {
-                return (
-                  <div
-                    {...getRootProps()}
-                    className={classNames('dropzone', {'dropzone--isActive': isDragActive})}
-                  >
-                    <input {...getInputProps()} />
-                    {
-                      isDragActive ?
-                        <p>Drop files here...</p> :
-                        <p>Try dropping some files here, or click to select files to upload.</p>
-                    }
-                  </div>
-                )
+              {({getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject, acceptedFiles, rejectedFiles}) => {
+                let styles = {...baseStyle}
+                    styles = isDragActive ? {...styles, ...activeStyle} : styles
+                    styles = isDragReject ? {...styles, ...rejectStyle} : styles
+                    return (
+                      <div
+                        {...getRootProps()}
+                        style={styles}
+                      >
+                        <input {...getInputProps()} />
+                        <div>
+                          {isDragAccept ? 'Drop' : 'Drag'} files here...
+                        </div>
+                        {isDragReject && <div>Unsupported file type...</div>}
+                      </div>
+                    )
               }}
             </Dropzone>
           </div>
-          <div className="col-sm-6">
+          <div className="col-sm-12">
+            <div id="super-image"></div>
             {this.state.files.length > 0 &&
               <SuperResolution image={this.state.files} />
             }
@@ -52,3 +55,23 @@ export default class DropImage extends React.Component {
     );
   }
 }
+
+const baseStyle = {
+  width: 200,
+  height: 200,
+  borderWidth: 2,
+  borderColor: '#666',
+  borderStyle: 'dashed',
+  borderRadius: 5,
+  margin: 'auto'
+};
+const activeStyle = {
+  borderStyle: 'solid',
+  borderColor: '#6c6',
+  backgroundColor: '#eee'
+};
+const rejectStyle = {
+  borderStyle: 'solid',
+  borderColor: '#c66',
+  backgroundColor: '#eee'
+};

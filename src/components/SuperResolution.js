@@ -6,7 +6,7 @@ export default class SuperResolution extends Component {
     super(props)
 
     this.state = {
-      image: ''
+      imageSrc: ''
     }
 
     let imageUrl = URL.createObjectURL(this.props.image[0])
@@ -76,9 +76,9 @@ export default class SuperResolution extends Component {
 
     console.log(image)
 
-    document.body.appendChild(image);
+    //document.body.appendChild(image);
 
-    //this.setState({image})
+    this.setState({imageSrc: dataUri})
   }
 
   getImage (url) {
@@ -101,7 +101,7 @@ export default class SuperResolution extends Component {
   render() {
     return (
       <div>
-        {this.state.image}
+        <img src={this.state.imageSrc} />
       </div>
     );
   }
