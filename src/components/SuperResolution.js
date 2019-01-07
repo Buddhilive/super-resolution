@@ -25,7 +25,7 @@ export default class SuperResolution extends Component {
 
       let model = await tf.loadModel('./model/model.json');
 
-      let prediction = await model.predict(tensor)
+       let prediction = await model.predict(tensor)
                                   .clipByValue(0, 1)
                                   .mul(tf.scalar(255))
                                   .data();
