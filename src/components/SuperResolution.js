@@ -16,14 +16,14 @@ export default class SuperResolution extends Component {
       var width = data.width
       var height = data.height
 
+      let model = this.props.model
+
       let tensor = tf.fromPixels(url)
                      .toFloat()
                      .div(tf.scalar(255))
-                     .expandDims(0);
+                     .expandDims();
 
       tensor.print()
-
-      let model = await tf.loadModel('./model/model.json');
 
        let prediction = await model.predict(tensor)
                                   .clipByValue(0, 1)

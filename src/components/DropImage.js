@@ -47,7 +47,7 @@ export default class DropImage extends React.Component {
           <div className="col-sm-12">
             <div id="super-image"></div>
             {this.state.files.length > 0 &&
-              <SuperResolution image={this.state.files} />
+              <SuperResolution image={this.state.files} model={this.props.model} />
             }
           </div>
         </div>
