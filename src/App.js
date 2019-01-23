@@ -3,7 +3,6 @@ import * as tf from '@tensorflow/tfjs';
 import DropImage from './components/DropImage'
 import './App.css';
 
-import { css } from '@emotion/core';
 // First way to import
 import { ClipLoader } from 'react-spinners';
 

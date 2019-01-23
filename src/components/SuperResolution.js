@@ -34,8 +34,6 @@ export default class SuperResolution extends Component {
 
       this.renderImage(prediction, width, height)
 
-
-
     }).catch(function(errorUrl){
         //do stuff
     })
