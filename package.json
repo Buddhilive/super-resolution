@@ -9,6 +9,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-dropzone": "8.0.3",
+    "react-spinners": "0.5.1",
     "string_decoder": "1.2.0"
   },
   "devDependencies": {
